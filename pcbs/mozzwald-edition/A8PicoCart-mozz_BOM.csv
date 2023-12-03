@@ -1,0 +1,4 @@
+RefDes,Name,Value,Manufacturer,Quantity,Datasheet
+D1,Diode SOD123 or Thru,1N5817,,1,https://www.mccsemi.com/pdf/Products/1N5817-1N5819(DO-41).pdf
+S1,SKHHLQA010,RESET,Alps,1,https://tech.alpsalpine.com/prod/e/pdf/tact/snapin/skhh/skhh.pdf
+U1,PiPico  Purple  or  Lite ,,,1,
