@@ -2,7 +2,7 @@
 
 # PCB
 
-The addition of a schottky diode allows the Pi Pico to be connected to USB while still connected to the Atari. The Pi Pico "Lite" boards already have a schottky diode to prevent back powering the USB port and this additional diode prevents the USB port from back powering the Atari. I have rotated the Pi Pico so the USB-C port and Reset button are at the top for easy access. This PCB was designed with [Diptrace 3.3.1.3](https://diptrace.com). ENIG plating is recommended for the PCB as it prevents corrosion to the exposed cart pins.
+The addition of a schottky diode and two MOSFETS allows the Pi Pico to be connected to USB while still connected to the Atari. The Pi Pico "Lite" boards already have a schottky diode to prevent back powering the USB port and this additional schottkey diode prevents the USB port from back powering the Atari. Two N-MOSFETS are used on RD4 and RD5 to prevent the Pico from powering those lines if the Atari is turned off. I have rotated the Pi Pico so the USB-C port and Reset button are at the top for easy access. This PCB was designed with [Diptrace 3.3.1.3](https://diptrace.com). ENIG plating is recommended for the PCB as it prevents corrosion to the exposed cart pins.
 
 # 3D
 
