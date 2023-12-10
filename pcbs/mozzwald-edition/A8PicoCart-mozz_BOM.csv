@@ -1,4 +1,5 @@
 RefDes,Name,Value,Manufacturer,Quantity,Datasheet
 D1,Diode SOD123 or Thru,1N5817,,1,https://www.mccsemi.com/pdf/Products/1N5817-1N5819(DO-41).pdf
+"Q1,Q2",MOSFET,BS170,,2,https://www.mouser.com/datasheet/2/308/1/MMBF170_D-3179750.pdf
 S1,SKHHLQA010,RESET,Alps,1,https://tech.alpsalpine.com/prod/e/pdf/tact/snapin/skhh/skhh.pdf
-U1,PiPico  Purple  or  Lite ,,,1,
+U1,Pi Pico Lite / Purple / Black,,,1,https://www.aliexpress.us/item/3256803742243554.html
