@@ -1,16 +1,16 @@
 /**
- *    _   ___ ___ _       ___          _   
- *   /_\ ( _ ) _ (_)__ _ / __|__ _ _ _| |_ 
+ *    _   ___ ___ _       ___          _
+ *   /_\ ( _ ) _ (_)__ _ / __|__ _ _ _| |_
  *  / _ \/ _ \  _/ / _/_\ (__/ _` | '_|  _|
  * /_/ \_\___/_| |_\__\_/\___\__,_|_|  \__|
- *                                         
- * 
+ *
+ *
  * Atari 8-bit cartridge for Raspberry Pi Pico (16MB clone with all GPIO)
  *
  * Robin Edwards 2023
  *
  * Needs to be a release NOT debug build for the cartridge emulation to work
- * 
+ *
  * Edit myboard.h depending on the type of flash memory on the pico clone
  */
 
@@ -43,10 +43,15 @@ int main(void)
   // enter USB mass storage mode
 
   stdio_init_all();   // for serial output, via printf()
-  printf("Start up\n");  
+  printf("Start up\n");
 
   // init device stack on configured roothub port
   tud_init(BOARD_TUD_RHPORT);
+
+  // Turn off GPIO0 after USB init
+  gpio_init(0);
+  gpio_set_dir(0, GPIO_OUT);
+  gpio_put(0, 0);
 
   while (1)
   {
@@ -65,7 +70,7 @@ int main(void)
 // Invoked when device is mounted
 void tud_mount_cb(void)
 {
-  printf("Device mounted\n"); 
+  printf("Device mounted\n");
   if (!mount_fatfs_disk())
     create_fatfs_disk();
 }
@@ -73,7 +78,7 @@ void tud_mount_cb(void)
 // Invoked when device is unmounted
 void tud_umount_cb(void)
 {
-  printf("Device unmounted\n");  
+  printf("Device unmounted\n");
 }
 
 // Invoked when usb bus is suspended
